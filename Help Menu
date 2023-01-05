@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+void printHelp();
+
+int main() {
+	printHelp();
+}
+
+void printHelp() {
+	cout << "Help Menu:" << endl;
+	cout << "1. WASD to move around" << endl;
+	cout << "2. Space to jump" << endl;
+	cout << "3. LMB to Attack" << endl;
+	cout << "4. F to block" << endl;
+}
+
+
+	
