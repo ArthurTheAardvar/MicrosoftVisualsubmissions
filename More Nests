@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	for (int i = 0; i < 5; i++) { //affects vertical number
+		for (int j = 1; j <= 4; j++) { // affects horizontal number
+			cout << j;// affects the pattern letter / number
+		}
+		cout << endl;
+	}
+
+}
