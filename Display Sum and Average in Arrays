@@ -1,0 +1,34 @@
+#include <iostream.
+using namespace std;
+
+int main() {
+  double num[] = { 7, 24, 45, 23, 68, 34 };
+
+	double sum = 0;
+	double count = 0;
+	double average;
+
+	cout << "The numbers are; ";
+	
+	// print array elements
+	// use of range based for loop
+	for (const double& n : num) {
+		cout << n << "  ";
+		
+		// calculate the sum
+		sum += n;
+
+		//count the no. of array elements 
+		++count;
+	}
+
+	//print the sum
+	cout << "\nTheir Sum = " << sum << endl;
+
+	//find the average
+	average = sum / count;
+	cout << "Their Average = " << average << endl;
+
+	return 0;
+
+}
