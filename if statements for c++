@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+	int temp;
+	cout << "please enter the temperature: " << endl;
+	cin >> temp;
+	if (temp <= 32)
+		cout << "wear a coat" << endl;
+	else if (temp < 60)
+		cout << "wear a sweater" << endl;
+	else if (temp < 80)
+		cout << "a t-shirt is fine" << endl;
+	else cout << "wear flip flops" << endl;
+
+	char choice;
+	cout << "please enter your gavorite mario bros character" << endl;
+	cin >> choice;
+	if (choice == 'm')
+		cout << "its a me" << endl;
+	else if (choice == 'l')
+		cout << "luigi time" << endl;
+	else if (choice == 'p')
+		cout << "would you like some cake?" << endl;
+	else
+		cout << "sorry, I dont know that character" << endl;
+}
