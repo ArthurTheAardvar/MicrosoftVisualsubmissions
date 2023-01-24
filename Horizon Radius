@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+void dump() {
+	//Use doubles to include decimals
+	double m; // mass
+	double g = 6.674e-11; //Newtonian gravitational constant
+	double c = 2.998e8; // speed of light
+	double r = 0; // event horizon radius
+
+	cout << "What is the Mass of the Black hole?" << endl;
+	cin >> m;
+	//Schwarzschild Radius equation in code
+	r = 2 * (g * m) / (c * c); // follows PEMDAS
+	cout << r << endl;
+}
+
+
+int main() {
+	while (1)//Create loop to test over and over
+		dump();
+}
