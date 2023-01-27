@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+	char character;
+	cout << "Which character do you like the best (b)art simpson, (s)cooby doo, (r)ick sanchez, (d)affy duck?, or (S)ponge bob?: " << endl;
+	cin >> character;
+	if (character == 'b')
+		cout << "eat my shorts" << endl;
+	else if (character == 's')
+		cout << "scooby dooby doo" << endl;
+	else if (character == 'r')
+		cout << "Wubba lubba dub dub" << endl;
+	else if (character == 'd')
+		cout << "suffering succotash" << endl;
+	else if (character == 'S')
+		cout << "(annoying laughter)" << endl;
+
+
+}
