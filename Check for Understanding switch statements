@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+	char character;
+	cout << "Which character do you like the best (b)art simpson, (s)cooby doo, (r)ick sanchez, (d)affy duck?, or (S)ponge bob?: " << endl;
+	cin >> character;
+
+	switch (character) {
+	case 'b':
+		cout << "eat my shorts" << endl;
+
+		break;
+
+	case 's':
+		cout << "scooby dooby doo" << endl;
+
+		break;
+
+	case 'r':
+		cout << "Wubba lubba dub dub" << endl;
+
+		break;
+
+	case 'd':
+		cout << "sufferin' succotash!" << endl;
+
+		break;
+
+	case 'S':
+		cout << "(annoying laughter)" << endl;
+
+		break;
+	}
+	
+}
