@@ -1,0 +1,23 @@
+from math import sin 
+import random
+
+L = int(input("Enter the level for the attacking pokemon"))
+C = int(input("Enter 2 for a critical hit and 1 otherwise"))
+P = int(input("Enter the power of the used move"))
+A = int(input("Enter the effective attack stat"))
+D = int(input ("Enter the defebsuve stat"))
+STAB = int(input("Enter same-type attack bonus"))
+Type1 = int(input("Enter the type effectivenes"))
+Type2 = int(input("Enter the second type effectiveness"))
+r = random.randrange(217, 255)
+
+def bs(L, C, P, A, D, STAB, Type1, Type2, r):
+
+    damage = ((((2*L*C)/5 +2)*P*A/D)/50+2) * STAB * Type1 * Type2 * r
+
+    return damage
+
+print(bs(L, C, P, A, D, STAB, Type1, Type2, r))
+
+
+
