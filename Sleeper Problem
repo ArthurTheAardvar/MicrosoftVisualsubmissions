@@ -1,0 +1,25 @@
+
+
+hour = int(input("What hour of the day does Mirko need to get out of bed?:"))
+minutes = int(input("What minute of the day does Mirko need to get out of bed?:"))
+
+
+while hour >=24:
+    hour -= 24
+
+
+while minutes >= 60:
+    minutes -= 60
+    hour += 1
+
+if (hour <= 24 and hour >= 0) and (minutes <= 60 and minutes >= 0):
+    minutes -= 40
+    if minutes < 0:
+        hour -= 1
+        minutes += 60
+        if hour < 0:
+            hour = 23
+    print(hour, minutes)
+
+else:
+     print("Incorrect Input")
