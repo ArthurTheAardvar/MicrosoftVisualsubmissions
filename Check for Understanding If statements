@@ -3,24 +3,20 @@ using namespace std;
 
 int main() {
 
-	char dessert;
-	char dessert2;
-	cout << "Do you want ice cream or candy" << endl;
-	cin >> dessert;
-	
-	cout << "Do you want chocolate or fruit" << endl;
-	cin >> dessert2;
 
-	if (dessert == 'i')
-		if (dessert2 == 'c')
-			cout << "You get a hot fudge sundae" << endl;
-		else if (dessert2 == 'f')
-			cout << "You get the strawberry blizzard" << endl;
+	char character;
+	cout << "Which character do you like the best (b)art simpson, (s)cooby doo, (r)ick sanchez, (d)affy duck?, or (S)ponge bob?: " << endl;
+	cin >> character;
+	if (character == 'b')
+		cout << "eat my shorts" << endl;
+	else if (character == 's')
+		cout << "scooby dooby doo" << endl;
+	else if (character == 'r')
+		cout << "Wubba lubba dub dub" << endl;
+	else if (character == 'd')
+		cout << "suffering succotash" << endl;
+	else if (character == 'S')
+		cout << "(annoying laughter)" << endl;
 
-	if (dessert == 'c')
-		if (dessert2 == 'c')
-			cout << "You get a hershey's bar" << endl;
-		else if (dessert2 == 'f')
-			cout << "You get the starbursts" << endl;
 
 }
