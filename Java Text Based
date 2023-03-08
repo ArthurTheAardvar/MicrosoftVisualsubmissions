@@ -1,0 +1,118 @@
+
+//dumb java stuff you have to set up first
+import java.util.Scanner;
+import java.util.Random;
+
+class Main {
+  public static void main(String[] args) {
+
+    Scanner Doggo = new Scanner(System.in); // create this thing to get user input
+    Random rand = new Random();
+    int Duck = rand.nextInt(100);
+    System.out.println("the number is " + Duck);
+
+    System.out.println("Java Text Based Game!"); // prints to screen
+
+    // game variables
+    int room = 1;
+    String input = "glurbaburbal!"; // dummy value for game loop
+    String[] inventory = { " ", " ", " ", " " }; // use this to hold player items
+    int money = 0;
+    while (input != "quit") { // OMG GAME LOOP-----------------------------------------
+      Duck = rand.nextInt(100);
+
+      // print inventory
+      System.out.println("Your inventory:");
+      for (int i = 0; i <= 3; i++)
+        System.out.println(inventory[i]);
+
+      switch (room) {
+        case 1:
+          System.out.println("You're in room 1, you can go East");
+          input = Doggo.nextLine();
+          if (input.equals("East"))
+            room = 2;
+          break;
+        case 2:
+          System.out.println("You're in room 2, you can go West or South");
+          input = Doggo.nextLine();
+          money +=Duck;
+          System.out.println("You found some gold! your gold is now:"+money );
+          if (input.equals("South"))
+            room = 3;
+          else if (input.equals("West"))
+            room = 1;
+          break;
+        case 3:
+          System.out.println("You're in room 3, you can go North or South.");
+          // check if they already have the gun, if not tell them they got it
+          if (!inventory[0].equals("marshmallow gun")) {
+            System.out.println("OMG you got the marshmallow gun!");
+            inventory[0] = "marshmallow gun";
+            if (input.equals("South"))
+              room = 4;
+            else if (input.equals("North"))
+              room = 2;
+            break;
+          }
+        case 4:
+          System.out.println("You're in room 4, you can go West or North");
+          input = Doggo.nextLine();
+          if (input.equals("North"))
+            room = 3;
+          else if (input.equals("West"))
+            room = 5;
+
+        case 5:
+          System.out.println("You're in room 5, you can go South or East");
+
+          if (!inventory[1].equals("Red Key")) {
+            System.out.println("You got the Red Key");
+            inventory[1] = "Red Key";
+          } else
+            ;
+          input = Doggo.nextLine();
+          if (input.equals("South"))
+            room = 6;
+          else if (input.equals("East"))
+            room = 4;
+
+        case 6:
+          System.out.println("You're in room 6, you can go North or East");
+          input = Doggo.nextLine();
+          if (input.equals("East"))
+            if (inventory[1].equals("Red Key")) {
+              System.out.println("You unlocked the door");
+              room = 7;
+            } else
+              ;
+          System.out.println("You dont have the key");
+
+        case 7:
+          System.out.println("You're in room 7, you can go South or West");
+          input = Doggo.nextLine();
+          money +=Duck;
+          System.out.println("You found some gold! your gold is now:"+money );
+          if (input.equals("South"))
+            room = 8;
+          else if (input.equals("West"))
+            room = 6;
+        case 8:
+          System.out.println("You're in room 8, you can go North");
+          if (!inventory[1].equals("Wish")) {
+            System.out.println("You get one free wish");
+            inventory[1] = "Wish";
+            input = Doggo.nextLine();
+            if (input.equals("North"))
+              room = 7;
+
+            input = Doggo.nextLine();
+            if (input.equals("North"))
+              room = 2;
+            break;
+          }
+      }// end bracket for switch
+    } // end bracket for OMG GAME
+      // LOOP----------------------------------------------------
+  }// end bracket for public static void main
+}// end bracket for class main
