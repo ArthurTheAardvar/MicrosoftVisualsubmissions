@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+
+
+
+
+int main() {
+	
+	drinkCoffee();
+	cout << "You chose the " << size << "Coffee and it has " << caffeine << endl;
+}
+void drinkCoffee() {
+	char size;
+	int caffeine;
+	cout << "What coffee would you like?: " << endl;
+	cin >> size;
+
+	if (size == 'L') {
+		if (caffeine == 180)
+			return caffeine;
+	}
+
+	else if (size == 'M') {
+		if (caffeine == 145)
+			return caffeine;
+	}
+
+	else if (size == 'S') {
+		if (caffeine == 109)
+			return caffeine;
+	}
+
+
+}
