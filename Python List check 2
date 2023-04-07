@@ -1,0 +1,9 @@
+
+names = []
+
+while names != 'quit':
+    pets = input("Enter the names of your pets and type quit to quit")
+    if pets != "quit":
+        names.append(pets)
+        names.sort()
+        print(names)
